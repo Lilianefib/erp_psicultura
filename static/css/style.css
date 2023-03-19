@@ -1,0 +1,14 @@
+
+.btn-secondary {
+    background-color: #087783 !important;
+    border-color: #087783 !important;
+}
+
+.btn-secondary:hover {
+    background-color: #098391 !important;
+    border-color: #098391 !important;
+}
+
+.active>.page-link, .page-link.active {
+    background-color: #087783 !important;
+

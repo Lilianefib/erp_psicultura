@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% include 'navbar.html' %}
+<br>
+  <h1>Lista de Plano de Contas</h1>
+<br>
+
+  <span class="pull-right">{{ object_list.count }}</span>
+
+  <div class="row">
+
+          <div class="col">
+            <form action="." method="GET">
+              <div class="row">
+                <div class="col p-ari-5">
+                  <input name="search" class="form-control mb-2" type="text" placeholder="Busca..." />
+                </div>
+                <div class="col-auto">
+                  <button class="btn btn-primary mb-2" type="submit">OK</button>
+                  <button class="btn btn-primary mb-2">Limpar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Descrição</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for planoconta in object_list %}
+        <tr>
+          <td>{{ planoconta.codigo }}</td>
+          <td>{{ planoconta.descricao }}</td>
+          <td>{{ planoconta.tipo_plano_contas }}</td>
+
+         </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

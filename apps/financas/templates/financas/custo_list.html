@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% include 'navbar.html' %}
+<br>
+  <h1>Lista de Custos</h1>
+<br>
+
+  <span class="pull-right">{{ object_list.count }}</span>
+
+  <div class="row">
+          <div class="col-md-auto">
+            <a class="btn btn-primary" href="{% url 'create_custo' %}">
+              <i class="fa fa-plus"></i>
+              Adicionar
+            </a>
+          </div>
+          <div class="col">
+            <form action="." method="GET">
+              <div class="row">
+                <div class="col p-ari-5">
+                  <input name="search" class="form-control mb-2" type="text" placeholder="Busca..." />
+                </div>
+                <div class="col-auto">
+                  <button class="btn btn-primary mb-2" type="submit">OK</button>
+                  <button class="btn btn-primary mb-2">Limpar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Descrição</th>
+        <th>Plano de Contas</th>
+        <th>Custo Médio</th>
+        <th>Ativo</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for custo in object_list %}
+        <tr>
+          <td>
+            <a href="">{{ custo }}</a>
+          </td>
+          <td>{{ custo.plano_contas }}</td>
+          <td>{{ custo.custo_medio }}</td>
+          <td>{{ custo.ativo }}</td>
+           <td>
+            <a href="{% url 'edit_custo' custo.id %}">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="{% url 'del_custo' custo.id %}" style="padding-left: 7px">
+              <i class="fa fa-close no"></i>
+            </a>
+          </td>
+         </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

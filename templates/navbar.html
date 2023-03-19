@@ -1,0 +1,150 @@
+{% load static %}
+<div class="sidebar close">
+		<div class="logo-details">
+			<i class='bx bxs-analyse'></i>
+			<span class="logo_name">ERP - Psicultura</span>
+		</div>
+			<ul class="nav-links">
+				<li>
+					<a href="#">
+						<i class='bx bx-grid-alt'></i>
+						<span class="link_name">Dashboard</span>
+					</a>
+					<ul class="sub-menu blank">
+						<li><a class="link_name" href="#">Dashboard</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="icon-link">
+						<a href="#">
+							<i class='bx bxs-spreadsheet'></i>
+							<span class="link_name">Propriedade</span>
+						</a>
+						<i class='bx bxs-chevron-down arrow'></i>
+					</div>
+					<ul class="sub-menu" id="submenu">
+						<li><a class="link_name" href="#">Propriedade</a></li>
+						<li><a href=" {% url 'list_viveiro' %}">Viveiros</a></li>
+						<li><a href="{% url 'list_cliente' %}">Clientes</a></li>
+						<li><a href="{% url 'list_fornecedor' %}">Fornecedores</a></li>
+                        <li><a href="{% url 'list_insumo' %}">Insumos</a></li>
+                        <li><a href="#">Rações</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="icon-link">
+						<a href="#">
+							<i class='bx bxl-product-hunt' ></i>
+							<span class="link_name">Produção</span>
+						</a>
+						<i class='bx bx-chevron-down arrow' ></i>
+					</div>
+					<ul class="sub-menu">
+						<li><a class="link_name" href="#">Produção</a></li>
+						<li><a href="#">Viveiros</a></li>
+						<li><a href="#">Povoamento</a></li>
+						<li><a href="#">Arraçoamento</a></li>
+                        <li><a href="#">Biometria</a></li>
+                        <li><a href="#">Transferência</a></li>
+                        <li><a href="#">Biometria</a></li>
+                        <li><a href="#">Mortalidade</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="icon-link">
+						<a href="#">
+							<i class='bx bx-cart-add'></i>
+							<span class="link_name">Vendas</span>
+						</a>
+						<i class='bx bx-chevron-down arrow' ></i>
+					</div>
+					<ul class="sub-menu">
+						<li><a class="link_name" href="#">Vendas</a></li>
+						<li><a href="#">Nova Venda</a></li>
+						<li><a href="#">Clientes</a></li>
+						<li><a href="#">Histórico</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="icon-link">
+						<a href="#">
+							<i class='bx bx-grid-alt'></i>
+							<span class="link_name">Financeiro</span>
+						</a>
+						<i class='bx bx-chevron-down arrow' ></i>
+					</div>
+					<ul class="sub-menu">
+						<li><a class="link_name" href="#">Financeiro</a></li>
+						<li><a href="#">Movimentações</a></li>
+						<li><a href="#">Minhas Contas</a></li>
+						<li><a href="#">Categorias de Movimentações</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="icon-link">
+						<a href="#">
+							<i class='bx bxs-user-rectangle'></i>
+							<span class="link_name">RH</span>
+						</a>
+						<i class='bx bx-chevron-down arrow' ></i>
+					</div>
+					<ul class="sub-menu">
+						<li><a class="link_name" href="#">RH</a></li>
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+						<li><a href="#">Item 3</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="icon-link">
+						<a href="#">
+							<i class='bx bx-droplet'></i>
+							<span class="link_name">Qualidade</span>
+						</a>
+						<i class='bx bx-chevron-down arrow' ></i>
+					</div>
+					<ul class="sub-menu">
+						<li><a class="link_name" href="#">Qualidade</a></li>
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+						<li><a href="#">Item 3</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="icon-link">
+						<a href="#">
+							<i class='bx bxs-report'></i>
+							<span class="link_name">Relatórios</span>
+						</a>
+						<i class='bx bx-chevron-down arrow' ></i>
+					</div>
+					<ul class="sub-menu">
+						<li><a class="link_name" href="#">Relatórios</a></li>
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+						<li><a href="#">Item 3</a></li>
+					</ul>
+				</li>
+			<li>
+			<div class="profile-details">
+				<div class="profile-content">
+					<img class="profile" src="{% static 'img/logo_liliane.png' %}" alt="">
+				</div>
+				<div class="name-job">
+					<div class="profile_name">Liliane Fialho</div>
+					<div class="job">Dev Web</div>
+				</div>
+				<a href="{% url 'logout' %}"><i class='bx bx-log-out' ></i></a>
+			</div>
+			</li>
+			</ul>
+</div>
+
+
+
+
+
+
+
+
+
